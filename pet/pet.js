@@ -57,13 +57,13 @@ addCommentForm.addEventListener('submit', async (e) => {
 
     const response = await createComment(commentInsert);
     error = response.error;
-    const commene = response.data;
+    const comment = response.data;
 
     if (error) {
         displayError();
     } else {
         addCommentForm.reset();
-        pet.comments.unshift(commene);
+        pet.comments.unshift(comment);
         displayComments();
     }
     // > Part C:
