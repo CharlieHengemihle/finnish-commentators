@@ -31,7 +31,9 @@ window.addEventListener('load', async () => {
         displayError();
     } 
     
-    if (pet) {
+    if (!pet) {
+        location.assign('/');
+    } else {
         displayPet();
     }
     // > Part B:
